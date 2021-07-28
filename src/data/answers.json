@@ -1,0 +1,192 @@
+{
+	"bootcamp" : {
+		"q1" : {
+			"answers" : [0],
+			"restrictions" : ""
+		},
+		"q2" : {
+			"answers" : [1, 3],
+			"restrictions" : ""
+		},
+		"q3" : {
+			"answers" : [0],
+			"restrictions" : ""
+		},
+		"q4" : {
+			"answers" : [1, 2, 3, 4],
+			"restrictions" : ""
+		},
+		"q5" : {
+			"answers" : [1],
+			"restrictions" : ""
+		},
+		"q6" : {
+			"answers" : [0, 1],
+			"restrictions" : ""
+		},
+		"q7" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q8" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q9" : {
+			"answers" : [],
+			"restrictions" : ""
+		}
+	},
+	"trad" : {
+		"q1" : {
+			"answers" : [0],
+			"restrictions" : ""
+		},
+		"q2" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q3" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q4" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q5" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q6" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q7" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q8" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q9" : {
+			"answers" : [],
+			"restrictions" : ""
+		}
+	},
+	"online" : {
+		"q1" : {
+			"answers" : [0],
+			"restrictions" : ""
+		},
+		"q2" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q3" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q4" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q5" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q6" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q7" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q8" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q9" : {
+			"answers" : [],
+			"restrictions" : ""
+		}
+	},
+	"traineeship" : {
+		"q1" : {
+			"answers" : [0],
+			"restrictions" : ""
+		},
+		"q2" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q3" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q4" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q5" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q6" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q7" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q8" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q9" : {
+			"answers" : [],
+			"restrictions" : ""
+		}
+	},
+	"alternative" : {
+		"q1" : {
+			"answers" : [0],
+			"restrictions" : ""
+		},
+		"q2" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q3" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q4" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q5" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q6" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q7" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q8" : {
+			"answers" : [],
+			"restrictions" : ""
+		},
+		"q9" : {
+			"answers" : [],
+			"restrictions" : ""
+		}
+	}
+}
