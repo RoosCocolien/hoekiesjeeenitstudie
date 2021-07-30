@@ -1,12 +1,12 @@
-{
-	"q1": {
+[
+	{
 		"question": "Ben je fulltime beschikbaar?",
 		"options": [
 			"Ja",
 			"Nee"
 		]
 	},
-	"q2": {
+	{
 		"question": "Voor hoe lang ben je beschikbaar?",
 		"options": [
 			"Ik wil meteen aan de slag kunnen",
@@ -17,7 +17,7 @@
 			"3 tot 5 jaar"
 		]
 	},
-	"q3": {
+	{
 		"question": "Hoeveel geld heb je te besteden?",
 		"options": [
 			"Tussen de 1000 en 6000 euro",
@@ -26,7 +26,7 @@
 			"Ik wil direct geld kunnen verdienen"
 		]
 	},
-	"q4": {
+	{
 		"question": "Wat is je opleidingsniveau?",
 		"options": [
 			"Basisschool",
@@ -36,35 +36,35 @@
 			"WO of hoger"
 		]
 	},
-	"q5": {
+	{
 		"question": "Wil je een studie met baangarantie?",
 		"options": [
 			"Ja, ik wil graag die zekerheid",
 			"Nee, dat is niet perse nodig"
 		]
 	},
-	"q6": {
+	{
 		"question": "Ben je bereid tot online zelfstudie?",
 		"options": [
 			"Ja",
 			"Nee"
 		]
 	},
-	"q7": {
+	{
 		"question": "Welke stelling past het beste bij jou?",
 		"options": [
 			"Ik wil zo in korte tijd skills leren die direct toepasbaar zijn in de praktijk.",
 			"Ik wil de tijd nemen en ben op zoek naar verdieping."
 		]
 	},
-	"q8": {
+	{
 		"question": "Wil je een studie volgen samen met andere studenten?",
 		"options": [
 			"Ja",
 			"Nee, ik heb voldoende motivatie om het zelf uit te zoeken"
 		]
 	},
-	"q9": {
+	{
 		"question": "Welke leermethodiek heeft jouw voorkeur?",
 		"options": [
 			"Zelfstudie",
@@ -73,4 +73,4 @@
 			"Focus op peer to peer learning"
 		]
 	}
-}
+]

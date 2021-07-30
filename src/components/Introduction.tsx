@@ -12,7 +12,7 @@ const Introduction = () => {
 			<div>
 				<Link to='/quiz'>
 					<button>
-						Let's go!
+						Let's Go!
 					</button>
 				</Link>
 			</div>

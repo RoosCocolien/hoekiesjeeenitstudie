@@ -3,18 +3,19 @@ import Questions from '../data/questions.json';
 import Answers from '../data/answers.json';
 
 const Quiz = () => {
+	let quizIndex = 0;
 
+	// const startQuiz = async () => {
+	// 	//start quiz, check state, which question is next?
+	// }
 
-	const startQuiz = async () => {
-		//start quiz, check state, which question is next?
-	}
-
-	const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+	const checkAnswer = (e: React.MouseEvent<HTMLLIElement>) => {
 		//add points to the different studie types
 	}
 
 	const nextQuestion = () => {
-		//next question
+		quizIndex += 1;
+		console.log('test: ' + quizIndex);
 	}
 
 	const showResult = () => {
@@ -23,14 +24,19 @@ const Quiz = () => {
 
 	return (
 		<div className="Quiz">
-			<h1>Question 1</h1>
-			<ul>
-				<li>Option 1</li>
-				<li>Option 2</li>
-				<li>Option 3</li>
-				<li>Option 4</li>
-			</ul>
-			<button className="start" onClick={startQuiz}>
+			<div className='quizQuestion'>
+				<h1>{Questions[quizIndex].question}</h1>
+			</div>
+			<div className="quizAnswer">
+				<p>
+					{Questions[quizIndex].options.map((option: string, index: number) =>
+						<button key={index} className="optionButton">
+							{option}
+						</button>
+					)}
+				</p>
+			</div>
+			<button className="next" onClick={nextQuestion}>
 				NEXT
 			</button>
 		</div>
