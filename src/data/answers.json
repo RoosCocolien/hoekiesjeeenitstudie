@@ -25,91 +25,91 @@
 			"restrictions" : ""
 		},
 		"q7" : {
-			"answers" : [],
+			"answers" : [0],
 			"restrictions" : ""
 		},
 		"q8" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		},
 		"q9" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		}
 	},
 	"trad" : {
 		"q1" : {
-			"answers" : [0],
+			"answers" : [0, 1],
 			"restrictions" : ""
 		},
 		"q2" : {
-			"answers" : [],
+			"answers" : [5],
 			"restrictions" : ""
 		},
 		"q3" : {
-			"answers" : [],
+			"answers" : [0, 1],
 			"restrictions" : ""
 		},
 		"q4" : {
-			"answers" : [],
+			"answers" : [1, 2, 3, 4],
 			"restrictions" : ""
 		},
 		"q5" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		},
 		"q6" : {
-			"answers" : [],
+			"answers" : [0, 1],
 			"restrictions" : ""
 		},
 		"q7" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		},
 		"q8" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		},
 		"q9" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		}
 	},
 	"online" : {
 		"q1" : {
-			"answers" : [0],
+			"answers" : [0, 1],
 			"restrictions" : ""
 		},
 		"q2" : {
-			"answers" : [],
+			"answers" : [1, 2],
 			"restrictions" : ""
 		},
 		"q3" : {
-			"answers" : [],
+			"answers" : [2],
 			"restrictions" : ""
 		},
 		"q4" : {
-			"answers" : [],
+			"answers" : [0, 1, 2, 3, 4],
 			"restrictions" : ""
 		},
 		"q5" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		},
 		"q6" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		},
 		"q7" : {
-			"answers" : [],
+			"answers" : [0, 1],
 			"restrictions" : ""
 		},
 		"q8" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		},
 		"q9" : {
-			"answers" : [],
+			"answers" : [0],
 			"restrictions" : ""
 		}
 	},
@@ -119,35 +119,35 @@
 			"restrictions" : ""
 		},
 		"q2" : {
-			"answers" : [],
+			"answers" : [3, 4, 5],
 			"restrictions" : ""
 		},
 		"q3" : {
-			"answers" : [],
+			"answers" : [3],
 			"restrictions" : ""
 		},
 		"q4" : {
-			"answers" : [],
+			"answers" : [3, 4],
 			"restrictions" : ""
 		},
 		"q5" : {
-			"answers" : [],
+			"answers" : [0],
 			"restrictions" : ""
 		},
 		"q6" : {
-			"answers" : [],
+			"answers" : [0, 1],
 			"restrictions" : ""
 		},
 		"q7" : {
-			"answers" : [],
+			"answers" : [0],
 			"restrictions" : ""
 		},
 		"q8" : {
-			"answers" : [],
+			"answers" : [0],
 			"restrictions" : ""
 		},
 		"q9" : {
-			"answers" : [],
+			"answers" : [2],
 			"restrictions" : ""
 		}
 	},
@@ -157,35 +157,35 @@
 			"restrictions" : ""
 		},
 		"q2" : {
-			"answers" : [],
+			"answers" : [3, 4, 5],
 			"restrictions" : ""
 		},
 		"q3" : {
-			"answers" : [],
+			"answers" : [2],
 			"restrictions" : ""
 		},
 		"q4" : {
-			"answers" : [],
+			"answers" : [0, 1, 2, 3, 4],
 			"restrictions" : ""
 		},
 		"q5" : {
-			"answers" : [],
+			"answers" : [0, 1],
 			"restrictions" : ""
 		},
 		"q6" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		},
 		"q7" : {
-			"answers" : [],
+			"answers" : [1],
 			"restrictions" : ""
 		},
 		"q8" : {
-			"answers" : [],
+			"answers" : [0],
 			"restrictions" : ""
 		},
 		"q9" : {
-			"answers" : [],
+			"answers" : [3],
 			"restrictions" : ""
 		}
 	}

@@ -1,14 +1,14 @@
 {
 	"q1": {
 		"question": "Ben je fulltime beschikbaar?",
-		"answers": [
+		"options": [
 			"Ja",
 			"Nee"
 		]
 	},
 	"q2": {
 		"question": "Voor hoe lang ben je beschikbaar?",
-		"answers": [
+		"options": [
 			"Ik wil meteen aan de slag kunnen",
 			"2 tot 6 maanden",
 			"Naast mijn huidige baan onbeperkt",
@@ -19,15 +19,16 @@
 	},
 	"q3": {
 		"question": "Hoeveel geld heb je te besteden?",
-		"answers": [
-			"Een paar duizend euro",
-			"Ik wil bij kunnen lenen",
-			"Ik heb niks te besteden"
+		"options": [
+			"Tussen de 1000 en 6000 euro",
+			"Ik moet bij kunnen lenen",
+			"Ik heb niks te besteden",
+			"Ik wil direct geld kunnen verdienen"
 		]
 	},
 	"q4": {
 		"question": "Wat is je opleidingsniveau?",
-		"answers": [
+		"options": [
 			"Basisschool",
 			"Middelbare school",
 			"MBO",
@@ -37,37 +38,38 @@
 	},
 	"q5": {
 		"question": "Wil je een studie met baangarantie?",
-		"answers": [
-			"Ja",
-			"Nee, ik kan zelf een baan vinden"
+		"options": [
+			"Ja, ik wil graag die zekerheid",
+			"Nee, dat is niet perse nodig"
 		]
 	},
 	"q6": {
 		"question": "Ben je bereid tot online zelfstudie?",
-		"answers": [
+		"options": [
 			"Ja",
 			"Nee"
 		]
 	},
 	"q7": {
 		"question": "Welke stelling past het beste bij jou?",
-		"answers": [
-			"Ik wil skills leren die direct toepasbaar zijn in de praktijk.",
+		"options": [
+			"Ik wil zo in korte tijd skills leren die direct toepasbaar zijn in de praktijk.",
 			"Ik wil de tijd nemen en ben op zoek naar verdieping."
 		]
 	},
 	"q8": {
-		"question": "Wil je studenten om je heen?",
-		"answers": [
+		"question": "Wil je een studie volgen samen met andere studenten?",
+		"options": [
 			"Ja",
 			"Nee, ik heb voldoende motivatie om het zelf uit te zoeken"
 		]
 	},
 	"q9": {
 		"question": "Welke leermethodiek heeft jouw voorkeur?",
-		"answers": [
+		"options": [
 			"Zelfstudie",
 			"Een gestructureerd curriculum ondersteund door docenten",
+			"Een programma waarin ik vrijwel direct praktijkervaring op kan doen",
 			"Focus op peer to peer learning"
 		]
 	}
