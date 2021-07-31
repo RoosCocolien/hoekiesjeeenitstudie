@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles/App.css'
-
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -13,7 +12,6 @@ import Home from './components/Home';
 import Introduction from './components/Introduction';
 import Info from './components/Info';
 import Quiz from './components/Quiz';
-import Result from './components/Result';
 import Contact from './components/Contact/Contact';
 
 const App = () => {
@@ -26,7 +24,6 @@ const App = () => {
 				<Route exact path='/contact' component={Contact}></Route>
 				<Route exact path='/info' component={Info}></Route>
 				<Route exact path='/quiz' component={Quiz}></Route>
-				<Route exact path='/result' component={Result}></Route>
 			</Switch>
 			<Footer />
 		</Router>
