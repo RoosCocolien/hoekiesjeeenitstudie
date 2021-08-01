@@ -7,7 +7,7 @@ const Home = () => {
 			<h1>Hoe kies je een IT-Studie?</h1>
 			<Link to='/introduction'>
 				<button>
-					START
+					Start
 				</button>
 			</Link>
 		</div>

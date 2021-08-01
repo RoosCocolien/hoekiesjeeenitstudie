@@ -6,12 +6,12 @@ const Navigation = () => {
 		<div className="Navigation">
 			<Link to='/'>
 				<button>
-					HOME
+					Home
 				</button>
 			</Link>
 			<Link to='/contact'>
 				<button>
-					CONTACT
+					Contact
 				</button>
 			</Link>
 		</div>

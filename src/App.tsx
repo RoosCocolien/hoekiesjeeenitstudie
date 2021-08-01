@@ -1,10 +1,11 @@
 import React from 'react';
-import './styles/App.css'
+// import './styles/App.css'
 import {
 	BrowserRouter as Router,
 	Switch,
 	Route
 } from 'react-router-dom';
+import { GlobalStyle } from './App.styles';
 
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -16,6 +17,8 @@ import Contact from './components/Contact/Contact';
 
 const App = () => {
 	return (
+		<>
+		<GlobalStyle />
 		<Router>
 			<Navigation />
 			<Switch>
@@ -27,6 +30,7 @@ const App = () => {
 			</Switch>
 			<Footer />
 		</Router>
+		</>
 	)
 }
 

@@ -8,10 +8,10 @@ const Footer = () => {
 				Made by Roos Cocolien, click
 				<Link to='/info'>
 					<button>
-						HERE
+						here
 					</button>
 				</Link>
-				for more info.
+				 for more info.
 			</p>
 		</div>
 	);
