@@ -26,8 +26,6 @@ export const useForm = (callback: any, initialState = {}) => {
 	};
 }
 
-
-
 /*
 	onChange >> sets target value of event that is passed to the target name
 	initialState should have attributes with the same name as the specified

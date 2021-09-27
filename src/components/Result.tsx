@@ -19,36 +19,52 @@ const Result: React.FC<Props> = ({answerResults}) => {
 		traineeship : answerResults.traineeship,
 		alternative : answerResults.alternative
 	}
+	function animatePercentage(object: number, start: number, end: number, duration: number) {
+		let startTimestamp : number = -1;
+		const step = (timestamp : number) => {
+			if (startTimestamp < 0) startTimestamp = 0;
+			const progress : number = Math.min((timestamp - startTimestamp) / duration, 1);
+			let numberPrint : number = Math.floor(progress * (end - start) + start);
+			console.log(numberPrint);
+			// object.innerHTML = Math.floor(progress * (end - start) + start);
+			if (progress < 1) {
+				window.requestAnimationFrame(step);
+			}
+		};
+		window.requestAnimationFrame(step);
+	}
+	const bootcampElement: HTMLElement | null = document.getElementById('bootcamp');
+	animatePercentage(0, 0, percentage.bootcamp, 5000);
 	return (
 		<ResultWrapper>
 			<h1>Resultaat</h1>
-			{/* <div className="resultIntroduction"> */}
-				<div className="container">
+				<section className="container">
 					<div className="row">
 						<div className="col-2 col-md-12">
 							<img src={bootcamp} alt="bootcamp icon"/>
 							<br/>
-							{percentage.bootcamp}%
+							<div id="bootcamp"></div>
+							{/* <div id="bootcamp">{percentage.bootcamp}%</div> */}
 						</div>
 						<div className="col-2 col-md-12">
 							<img src={online} alt="zelfstudie icon"/>
 							<br/>
-							{percentage.online}%
+							<div id="online">{percentage.online}%</div>
 						</div>
 						<div className="col-2 col-md-12">
 							<img src={trad} alt="traditioneel onderwijs icon"/>
 							<br/>
-							{percentage.trad}%
+							<div id="trad">{percentage.trad}%</div>
 						</div>
 						<div className="col-2 col-md-12">
 							<img src={traineeship} alt="traineeship icon"/>
 							<br/>
-							{percentage.traineeship}%
+							<div id="traineeship">{percentage.traineeship}%</div>
 						</div>
 						<div className="col-2 col-md-12">
 							<img src={alternative} alt="alternatief onderwijs icon"/>
 							<br/>
-							{percentage.alternative}%
+							<div id="alternative">{percentage.alternative}%</div>
 						</div>
 					</div>
 					<div className="row justify-content-center">
@@ -58,9 +74,10 @@ const Result: React.FC<Props> = ({answerResults}) => {
 							</p>
 						</div>
 					</div>
-				</div>
-			{/* </div> */}
-			
+				</section>
+
+			{/* Onderstaande code kan ik ook in een component stoppen.
+			En dan kan je met pijltjes naar de volgende onderdelen (slideshow idee) */}
 			<div className="Result">
 
 				<div className="ResultBootcamp">
