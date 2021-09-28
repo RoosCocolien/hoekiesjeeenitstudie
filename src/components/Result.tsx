@@ -9,10 +9,17 @@ import alternative from '../images/alternative_no_text.png';
 import { ResultWrapper } from '../App.styles';
 
 //Styling
+// transform: translateX(${({ animate }) => (animate ? "0" : "-100vw")});
+// transition: transform 1s;
 const Logo = styled.img`
 	width: 100px;
 	height: 100px;
 	object-fit: cover;
+`;
+
+const AnimatedDiv = styled.div`
+	transform: translateX(${({ animate }) => (animate ? "0" : "-100vw")});
+	transition: transform 1s;
 `
 
 //functional component result typescript
@@ -47,26 +54,43 @@ const Result: React.FC<Props> = ({answerResults}) => {
 		const topPosition = (element : any) => element.getBoundingClientRect().top;
 
 		const bootcampPos = topPosition(bootcampRef.current),
-			onlinePos = topPosition(tradRef.current),
+			onlinePos = topPosition(onlineRef.current),
 			tradPos = topPosition(tradRef.current),
 			traineeshipPos = topPosition(traineeshipRef.current),
 			alternativePos = topPosition(alternativeRef.current);
 		
 		const onScroll = () => {
 			const scrollPos = window.scrollY + window.innerHeight;
-		}
-	})
+			if (bootcampPos < scrollPos) {
+				doShow(state => ({...state, itemBootcamp: true}));
+			} else if (onlinePos < scrollPos) {
+				doShow(state => ({...state, itemOnline: true}));
+			} else if (tradPos < scrollPos) {
+				doShow(state => ({...state, itemTrad: true}));
+			} else if (traineeshipPos < scrollPos) {
+				doShow(state => ({...state, itemTraineeship: true}));
+			} else if (alternativePos < scrollPos) {
+				doShow(state => ({...state, itemAlternative: true}));
+			};
+		};
+
+			window.addEventListener('scroll', onScroll);
+			return () => window.removeEventListener('scroll', onScroll); //cleanup function
+		}, []); //no dependecies
 
 	return (
+		<>
 		<ResultWrapper>
 			<h1>Resultaat</h1>
 				<section className="container">
 					<div className="row">
 						<div className="col-2 col-md-12">
 							{/* <img src={bootcamp} alt="bootcamp icon"/> */}
-							<Logo src={bootcamp} alt="bootcamp logo"/>
-							<br/>
-							<CountUp end={percentage.bootcamp} duration={2}/>%
+							<AnimatedDiv animate={show.itemBootcamp} ref={bootcampRef}>
+								<Logo src={bootcamp} alt="bootcamp logo"/>
+								<br/>
+								<CountUp end={percentage.bootcamp} duration={2}/>%
+							</AnimatedDiv>
 						</div>
 						<div className="col-2 col-md-12">
 							<Logo src={online} alt="zelfstudie icon"/>
@@ -150,7 +174,10 @@ const Result: React.FC<Props> = ({answerResults}) => {
 				</div>
 			</div>
 		</ResultWrapper>
+		</>
 	)
+
+
 };
 
 export default Result;
