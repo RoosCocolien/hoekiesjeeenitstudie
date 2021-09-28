@@ -7,11 +7,11 @@ import { GlobalStyle } from './App.styles';
 
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import Home from './components/Home';
-import Introduction from './components/Introduction';
-import Info from './components/Info';
+import Home from './pages/Home';
+import Introduction from './pages/Introduction';
+import Info from './pages/Info';
 import Quiz from './components/Quiz';
-import Contact from './components/Contact/Contact';
+import Contact from './pages/Contact/Contact';
 
 const App = () => {
 	return (

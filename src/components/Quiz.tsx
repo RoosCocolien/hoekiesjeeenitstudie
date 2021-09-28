@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Question from './Question';
 import Result from './Result';
 import Questions from '../data/questions.json';
-import { shuffleArray } from '../utils';
+// import { shuffleArray } from '../utils';
 import { calculatePoints } from '../calculations/calculate';
 
 
@@ -43,7 +43,7 @@ const Quiz = () => {
 		//if selected answer
 		//add selected answer to userOptions
 		setLoading(true);
-		if (currAnswer != undefined) {
+		if (currAnswer !== undefined) {
 			console.log('test2');
 			console.log('curr answer is: ' + currAnswer + ' of question ' + quizIndex);
 			let newArray: number[] = [...userOptions];
@@ -86,7 +86,7 @@ const Quiz = () => {
 	return (
 		<div className="QuizPage">
 
-			{endOfQuiz! || quizIndex != TOTAL_QUESTIONS && 
+			{endOfQuiz! || quizIndex !== TOTAL_QUESTIONS && 
 				<div className="Quiz">
 					<Question 
 						questionIndex={quizIndex}
@@ -98,7 +98,7 @@ const Quiz = () => {
 					/>
 				</div>
 			}
-			{currAnswer != undefined &&
+			{currAnswer !== undefined &&
 				<div className="nextButton">
 					<button id="nextBtn" className="next" onClick={nextQuestion}>
 						NEXT

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+import CountUp from 'react-countup';
 import bootcamp from '../images/bootcamp_no_text.png';
 import online from '../images/online_no_text.png';
 import trad from '../images/trad_no_text.png';
@@ -6,7 +8,14 @@ import traineeship from '../images/traineeship_no_text.png';
 import alternative from '../images/alternative_no_text.png';
 import { ResultWrapper } from '../App.styles';
 
-//functional component result
+//Styling
+const Logo = styled.img`
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+`
+
+//functional component result typescript
 type Props = {
 	answerResults: any;
 }
@@ -19,52 +28,65 @@ const Result: React.FC<Props> = ({answerResults}) => {
 		traineeship : answerResults.traineeship,
 		alternative : answerResults.alternative
 	}
-	function animatePercentage(object: number, start: number, end: number, duration: number) {
-		let startTimestamp : number = -1;
-		const step = (timestamp : number) => {
-			if (startTimestamp < 0) startTimestamp = 0;
-			const progress : number = Math.min((timestamp - startTimestamp) / duration, 1);
-			let numberPrint : number = Math.floor(progress * (end - start) + start);
-			console.log(numberPrint);
-			// object.innerHTML = Math.floor(progress * (end - start) + start);
-			if (progress < 1) {
-				window.requestAnimationFrame(step);
-			}
-		};
-		window.requestAnimationFrame(step);
-	}
-	const bootcampElement: HTMLElement | null = document.getElementById('bootcamp');
-	animatePercentage(0, 0, percentage.bootcamp, 5000);
+
+	const [show, doShow] = useState({
+		itemBootcamp: false,
+		itemOnline: false,
+		itemTrad: false,
+		itemTraineeship: false,
+		itemAlternative: false
+	});
+
+	const bootcampRef = useRef(null),
+		onlineRef = useRef(null),
+		tradRef = useRef(null),
+		traineeshipRef = useRef(null),
+		alternativeRef = useRef(null);
+
+	useLayoutEffect(() => {
+		const topPosition = (element : any) => element.getBoundingClientRect().top;
+
+		const bootcampPos = topPosition(bootcampRef.current),
+			onlinePos = topPosition(tradRef.current),
+			tradPos = topPosition(tradRef.current),
+			traineeshipPos = topPosition(traineeshipRef.current),
+			alternativePos = topPosition(alternativeRef.current);
+		
+		const onScroll = () => {
+			const scrollPos = window.scrollY + window.innerHeight;
+		}
+	})
+
 	return (
 		<ResultWrapper>
 			<h1>Resultaat</h1>
 				<section className="container">
 					<div className="row">
 						<div className="col-2 col-md-12">
-							<img src={bootcamp} alt="bootcamp icon"/>
+							{/* <img src={bootcamp} alt="bootcamp icon"/> */}
+							<Logo src={bootcamp} alt="bootcamp logo"/>
 							<br/>
-							<div id="bootcamp"></div>
-							{/* <div id="bootcamp">{percentage.bootcamp}%</div> */}
+							<CountUp end={percentage.bootcamp} duration={2}/>%
 						</div>
 						<div className="col-2 col-md-12">
-							<img src={online} alt="zelfstudie icon"/>
+							<Logo src={online} alt="zelfstudie icon"/>
 							<br/>
-							<div id="online">{percentage.online}%</div>
+							<CountUp end={percentage.online} duration={2}/>%
 						</div>
 						<div className="col-2 col-md-12">
-							<img src={trad} alt="traditioneel onderwijs icon"/>
+							<Logo src={trad} alt="traditioneel onderwijs icon"/>
 							<br/>
-							<div id="trad">{percentage.trad}%</div>
+							<CountUp end={percentage.trad} duration={2}/>%
 						</div>
 						<div className="col-2 col-md-12">
-							<img src={traineeship} alt="traineeship icon"/>
+							<Logo src={traineeship} alt="traineeship icon"/>
 							<br/>
-							<div id="traineeship">{percentage.traineeship}%</div>
+							<CountUp end={percentage.traineeship} duration={2}/>%
 						</div>
 						<div className="col-2 col-md-12">
-							<img src={alternative} alt="alternatief onderwijs icon"/>
+							<Logo src={alternative} alt="alternatief onderwijs icon"/>
 							<br/>
-							<div id="alternative">{percentage.alternative}%</div>
+							<CountUp end={percentage.alternative} duration={2}/>%
 						</div>
 					</div>
 					<div className="row justify-content-center">
@@ -75,13 +97,9 @@ const Result: React.FC<Props> = ({answerResults}) => {
 						</div>
 					</div>
 				</section>
-
-			{/* Onderstaande code kan ik ook in een component stoppen.
-			En dan kan je met pijltjes naar de volgende onderdelen (slideshow idee) */}
 			<div className="Result">
-
 				<div className="ResultBootcamp">
-					<img src={bootcamp} alt="bootcamp icon"/>
+					<Logo src={bootcamp} alt="bootcamp icon"/>
 					<h2>Bootcamp</h2>
 					<h3>{percentage.bootcamp}%</h3>
 					<p>
@@ -91,7 +109,7 @@ const Result: React.FC<Props> = ({answerResults}) => {
 					</p>
 				</div>
 				<div className="ResultOnline">
-					<img src={online} alt="zelfstudie icon"/>
+					<Logo src={online} alt="zelfstudie icon"/>
 					<h2>Zelfstudie</h2>
 					<h3>{percentage.online}%</h3>
 					<p>
@@ -101,7 +119,7 @@ const Result: React.FC<Props> = ({answerResults}) => {
 					</p>
 				</div>
 				<div className="ResultTrad">
-					<img src={trad} alt="traditioneel onderwijs icon"/>
+					<Logo src={trad} alt="traditioneel onderwijs icon"/>
 					<h2>Traditioneel onderwijs</h2>
 					<h3>{percentage.trad}%</h3>
 					<p>
@@ -111,7 +129,7 @@ const Result: React.FC<Props> = ({answerResults}) => {
 					</p>
 				</div>
 				<div className="ResultTraineeship">
-					<img src={traineeship} alt="traineeship icon"/>
+					<Logo src={traineeship} alt="traineeship icon"/>
 					<h2>Traineeship</h2>
 					<h3>{percentage.traineeship}%</h3>
 					<p>
@@ -121,9 +139,7 @@ const Result: React.FC<Props> = ({answerResults}) => {
 					</p>
 				</div>
 				<div className="ResultAlternative">
-					<div className="ResultImage">
-						<img src={alternative} alt="alternatief onderwijs icon"/>
-					</div>
+					<Logo src={alternative} alt="alternatief onderwijs icon"/>
 					<h2>Alternatief onderwijs</h2>
 					<h3>{percentage.alternative}%</h3>
 					<p>
